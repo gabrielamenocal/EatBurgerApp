@@ -12,3 +12,5 @@ CREATE TABLE burgerTable(
 
 
 JAWS y40y3ddcixliedz9
+
+Createdat TIMESTAMP NOT NULL;
