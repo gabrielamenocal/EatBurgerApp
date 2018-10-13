@@ -1,0 +1,41 @@
+body{
+    background-image: url("https://banner2.kisspng.com/20180130/ijq/kisspng-hamburger-french-fries-vector-hand-painted-burger-fries-background-5a70943f32f699.2704931415173274232088.jpg");
+}
+
+#burger{
+ padding: 20px;
+ margin: auto;
+
+}
+
+#burgerSubmit{
+       margin: auto;
+}
+
+.square{
+    background-color: aliceblue;
+    border: 5px solid orange;
+    width: 400px;
+    height: 100px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+
+.squarePhoto{
+    background-color: aliceblue;
+    border: 5px solid orange;  
+    margin: auto;
+    margin-bottom: 20px;   
+    width: 200px;
+    height: 200px; 
+}
+
+#buttonTitle #title{
+    margin-left: 50px; 
+}
+
+#burger2{
+    width: 200px;
+    height: 200px;   
+}
