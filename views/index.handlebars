@@ -22,10 +22,10 @@
 
 <div id="burgerAdded">
     <ul>
-        {{#each burgerTable}}
-            {{#unless devoured}}
-            {{> burgerTable/burger_block devoured=false}}
-            {{/unless}}
+        {{#each items}}
+            {{!-- {{#if devoured}} --}}
+            {{burger_name}}
+            {{!-- {{/if}} --}}
         {{/each}}
     </ul>
 </div>

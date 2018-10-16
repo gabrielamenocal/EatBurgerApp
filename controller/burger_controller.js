@@ -7,12 +7,13 @@ router.get("/", function(request, response){
         var hbsObject = {
             burger_table: data
         };
-        console.log(object);
-        response.render("index", hbsObject);
+        console.log(hbsObject);
+        response.render("index",{items: hbsObject});
     });
 });
 
 router.post("/api/burger", function(request, response){
+    console.log(request.body);
     burger.create([
         "burger_name", "devoured"
     ], [ request.body.burger_name, request.body.devoured],function(result){
@@ -31,7 +32,7 @@ router.put("/api/burger/:id", function(request, response){
             } else{
                 response.status(200).end();
             }
-        }
+        
     });    
 });
 

@@ -1,10 +1,10 @@
-var connection = require("./connection.js");
+var connection = require("./connections.js");
 
 var orm = {
 
     selectAll: function(table, callback) {
-        var queryString = "SELECT * FROM ?";
-        connection.query(queryString, [table], 
+        var queryString = "SELECT * FROM burgertable";
+        connection.query(queryString,  
             function(error, result) {
                 if (error) throw error;
                 console.log(result);
