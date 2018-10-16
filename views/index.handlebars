@@ -15,10 +15,34 @@
 
 <br> <br>
 
+
+<div class="">
+    <h2 class="square2">Burger not eaten!</h2>
+</div>
+
 <div id="burgerAdded">
+    <ul>
+        {{#each burgerTable}}
+            {{#unless devoured}}
+            {{> burgerTable/burger_block devoured=false}}
+            {{/unless}}
+        {{/each}}
+    </ul>
+</div>
+
+
+<div class="">
+    <h2 class="square2">Burger Eaten..Was so Goood..!!!!</h2>
 </div>
 
 <div id="burgerDevoured">
+    <ul>
+        {{#each burgerTable}}
+            {{#if devoured}}
+            {{> burgerTable/burger_block devoured=true}}
+            {{/if}}
+        {{/each}}
+    </ul>
 </div>
 
 
@@ -27,9 +51,9 @@
 
 
 <form class="square">
-   <div class="square"> <h2 id="buttonTitle"> Add  new burger burger </h2> </div> 
+   <div class="square"> <h2 id="buttonTitle"> Add new burger burger </h2> </div> 
     <input id="burger" placeholder="...burger...yummy...">
     <button  id="burgerSubmit" type="button" class="btn btn-primary">Add burger</button>
-    <submit id="burgerSubmit2" class="btn btn-primary">Add burger</submit>
-
 </form>
+
+<div id="message"> Burger Added Successfullly :) </div>
