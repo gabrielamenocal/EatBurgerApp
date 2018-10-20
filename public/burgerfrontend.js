@@ -2,30 +2,27 @@ $(document).ready(function() {
         console.log( "ready!" );
         $("#message").hide();
 
-        // $.ajax({ url: "/app/friends", method: "GET" })
-        //   .then(function(friendsData) {
-    
-        //     console.log(friendsData);
-   
-        //     for (var i = 0; i < friendsData.length; i++) {
-    
-        //       var yourResults = $("#yourResults");
-    
-        //       var listItem = $("<li class='list-group-item mt-4'>");
-    
-        //       listItem.append
-        //       (
-        //         $("<h2>").text("Friend #" + (i + 1)),
-        //         $("<hr>"),
-        //         $("<h3>").text("Name: " + friendsData[i].name),
-        //         $("<img width='150px'>").attr("src",  friendsData[i].photo),
-        //         $("<h3>").text("score: " + friendsData[i].scores),
-        //         $("<h3>").text("Toral score: " + friendsData[i].totalScore),
-        //       );
+        $.ajax({
+            url: "/", 
+            method: "GET"
+        }).then(
+            function(burgerData) {
+                console.log("burgers added");
 
-        //       yourResults.append(listItem)
+                var listBurgerAdded= $("#listBurgerAdded");
+                var listBurgerDevoured= $("#listBurgerDevoured");
 
-        //  };
+                for (var i=0; i<burgerData.lenght; i++){
+
+                    listBurgerAdded.append(burgerData.name);
+                    listBurgerDevoured.append(burgerData);
+                };
+                location.reload();                             
+            }).fail(function(xhr, status, error){
+            console.log(error);
+            console.log(status);
+            alert("Sorry, Something went wrong, cannot add burger..");
+        });
 
     $("#burgerSubmit").on("click", function(){
         event.preventDefault();

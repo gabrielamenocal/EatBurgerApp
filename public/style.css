@@ -24,10 +24,9 @@ body{
 .square2{
     background-color: aliceblue;
     border: 5px solid blue;
-    width: 400px;
-    height: 100px;
     margin-bottom: 20px;
     overflow: left;
+    width: 30%;
 }
 
 

@@ -16,15 +16,14 @@
 <br> <br>
 
 
-<div class="">
-    <h2 class="square2">Burger not eaten!</h2>
-</div>
+<div class="square2" id="burgerAdded">
+    <h2 >Burger previosly Added!</h2>
 
-<div id="burgerAdded">
-    <ul>
-        {{#each items}}
+    <ul class="list-group" id="#listBurgerAdded">
+        {{#each burger}}
             {{!-- {{#if devoured}} --}}
-            {{burger_name}}
+           <li class="list-group-item mt-4">{{this.id}}. {{this.burger_name}}</li> 
+
             {{!-- {{/if}} --}}
         {{/each}}
     </ul>
@@ -35,9 +34,9 @@
     <h2 class="square2">Burger Eaten..Was so Goood..!!!!</h2>
 </div>
 
-<div id="burgerDevoured">
+<div id="burgerDevoured" id="#listBurgerDevoured">
     <ul>
-        {{#each burgerTable}}
+        {{#each items}}
             {{#if devoured}}
             {{> burgerTable/burger_block devoured=true}}
             {{/if}}

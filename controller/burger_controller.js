@@ -4,11 +4,8 @@ var burger = require("../models/burger.js");
 
 router.get("/", function(request, response){
     burger.all(function(data){
-        var hbsObject = {
-            burger_table: data
-        };
-        console.log(hbsObject);
-        response.render("index",{items: hbsObject});
+        var hbsObject = { burger: data };
+        response.render("index",hbsObject);
     });
 });
 

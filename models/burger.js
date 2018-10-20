@@ -9,13 +9,15 @@ var burger = {
     },
 
     create: function(col, val,callback){
-        orm.create("burgertable", col, val, function(response){
+        console.log(val);
+        console.log(col);
+        orm.insertOne("burgertable", col, val, function(response){
             callback(response);
         });
     },
 
     update: function(col, val, new_val, callback){
-        orm.create("burgertable", col, val, new_val, function(response){
+        orm.updateOne("burgertable", col, val, new_val, function(response){
             callback(response);
         });
     },

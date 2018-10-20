@@ -12,11 +12,11 @@ var orm = {
         });
       },    
 
-    insertOne: function(table, burger_name, state, callback) {
-     // INSERT INTO burgerTable (burger_name, devoured) VALUES ("tripleCheeseBurger", TRUE);
-      var queryString = "INSERT INTO ? VALUES (?,?) ";
+    insertOne: function(table, column, values, callback) {
+     //INSERT INTO burgerTable (burger_name, devoured) VALUES ("tripleCheeseBurger", TRUE);
+      var queryString = "INSERT INTO burgertable VALUES (?,?,?) ";
       console.log(queryString);
-      connection.query(queryString, [table, burger_name, state], 
+      connection.query(queryString, [null, values[0], values[1] === 'false' ? false: true], 
         function(error, result) {
             if (error) throw error;
             console.log(result);
