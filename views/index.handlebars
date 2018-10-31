@@ -21,10 +21,8 @@
 
     <ul class="list-group" id="#listBurgerAdded">
         {{#each burger}}
-            {{!-- {{#if devoured}} --}}
            <li class="list-group-item mt-4">{{this.id}}. {{this.burger_name}}</li> 
-
-            {{!-- {{/if}} --}}
+           <button class="change-devoured" info="{{this.id}}"> Devour </button>
         {{/each}}
     </ul>
 </div>
